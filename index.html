@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Ninja To Cat</title>
+
+    <script>
+        $(document).ready(function(){
+            $("img").click(function(){
+                var srcOne = $(this).attr("src");
+                var altOne = $(this).attr("alt");
+                var srcTwo = $(this).attr("data-alt-src");
+                var altTwo = $(this).attr("alt-src");
+
+                if($(this).attr("alt") == "ninja"){
+                    $(this).attr("src", srcTwo);
+                    $(this).attr("alt", altTwo);
+                    $(this).attr("data-alt-src", srcOne);
+                    $(this).attr("alt-src", altOne);
+                }  
+                else if($(this).attr("alt") == "cat"){
+                    $(this).attr("src", srcTwo);
+                    $(this).attr("alt", altTwo);
+                    $(this).attr("data-alt-src", srcOne);
+                    $(this).attr("alt-src", altOne);
+                }                
+            });
+        });
+    </script>
+</head>
+<body>
+    <img src='img/ninja0.png' alt="ninja" data-alt-src='img/cat0.png' alt-src='cat'/>
+    <img src='img/ninja1.png' alt="ninja" data-alt-src='img/cat1.png' alt-src='cat'/>
+    <img src='img/ninja2.png' alt="ninja" data-alt-src='img/cat2.png' alt-src='cat'/>
+    <img src='img/ninja3.png' alt="ninja" data-alt-src='img/cat3.png' alt-src='cat'/>
+    <img src='img/ninja4.png' alt="ninja" data-alt-src='img/cat4.png' alt-src='cat'/>
+</body>
+</html>
